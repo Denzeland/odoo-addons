@@ -14,7 +14,7 @@
     'version': '1.0.1',
     'depends': ['base', 'website'],
     'images': [
-        'images/screen.png'
+        'static/description/screen.png'
     ],
     'data': [
         'security/ir.model.access.csv',
@@ -25,4 +25,7 @@
     'qweb': [
         'static/src/xml/*.xml',
     ],
+    'license': 'LGPL-3',
+    'price': 9.0,
+    'support': '2426548297@qq.com'
 }
