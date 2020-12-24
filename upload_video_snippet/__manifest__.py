@@ -26,6 +26,7 @@
         'static/src/xml/*.xml',
     ],
     'license': 'LGPL-3',
-    'price': 9.0,
+    'price': 1.0,
+    'currency': 'USD',
     'support': '2426548297@qq.com'
 }
