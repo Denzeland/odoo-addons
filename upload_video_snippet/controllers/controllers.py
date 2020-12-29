@@ -22,7 +22,7 @@ class WebsiteVideosController(http.Controller):
         video = request.env['video.video'].create(create_dict)
         return json.dumps({
             'url': request.httprequest.host_url + 'videos/stream/' + str(video.id) + '.mp4',
-            'msg': '上传成功'
+            'msg': 'upload success'
         })
 
     @http.route('/videos/stream/<video>.mp4', type="http", auth="public")

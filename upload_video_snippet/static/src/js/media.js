@@ -12,10 +12,10 @@ odoo.define('hlcloud_website.wysiwyg.widgets.media', function (require) {
             return this._super.apply(this, arguments).then(function () {
                 self.$('.o_video_dialog_options').after('<div class="upload-area">\n' +
                     '                    <label class="col-form-label" for="o_video_text">\n' +
-                    '                        其他上传方式\n' +
+                    '                        other upload methods\n' +
                     '                    </label>\n' +
                     '                    <div id="videoDragDrop">\n' +
-                    '                        <button type="button" class="btn btn-primary upload-trigger">点击上传视频</button>\n' +
+                    '                        <button type="button" class="btn btn-primary upload-trigger">upload video</button>\n' +
                     '                    </div>\n' +
                     '                </div>');
             });
@@ -35,14 +35,14 @@ odoo.define('hlcloud_website.wysiwyg.widgets.media', function (require) {
         start: function () {
             var self = this;
             return this._super.apply(this, arguments).then(function () {
-                //    处理视频文件上传
+                //    use uppy to handle upload video
                 var uppy = Uppy.Core({
                     debug: true,
                     meta: {
                         csrf_token: core.csrf_token
                     },
                     autoProceed: true,
-                    locale: Uppy.locales.zh_CN,
+                    locale: Uppy.locales.en_US,
                     allowMultipleUploads: false,
                     restrictions: {
                         maxNumberOfFiles: 1,
@@ -58,9 +58,12 @@ odoo.define('hlcloud_website.wysiwyg.widgets.media', function (require) {
                 });
                 uppy.use(Uppy.Webcam, {
                     target: Uppy.Dashboard,
-                    title: '摄像头(https)'
+                    // title: '摄像头(https)'
                 });
-                uppy.use(Uppy.ScreenCapture, {target: Uppy.Dashboard, title: '屏幕录制'});
+                uppy.use(Uppy.ScreenCapture, {
+                    target: Uppy.Dashboard,
+                    // title: '屏幕录制'
+                });
                 uppy.use(Uppy.XHRUpload, {
                     endpoint: location.origin + '/videos/upload/process',
                     fieldName: 'file'
@@ -68,7 +71,6 @@ odoo.define('hlcloud_website.wysiwyg.widgets.media', function (require) {
                 uppy.on('upload-success', (file, response) => {
                     // HTTP status code
                     // extracted response data
-                    console.log('文件上传成功', file, response.status, response.body);
                     const videoUrl = response.body.url;
                     self._updateVideoViaUrl(videoUrl);
                 });
