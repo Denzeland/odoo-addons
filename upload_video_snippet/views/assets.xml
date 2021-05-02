@@ -2,19 +2,19 @@
 <odoo>
     <template id="assets_wysiwyg" inherit_id="website.assets_wysiwyg" name="hlcloud website snippet options">
         <xpath expr="//link[last()]" position="after">
-            <link rel="stylesheet" type="text/scss" href="/hlcloud_website/static/lib/uppy/uppy.min.css"/>
+            <link rel="stylesheet" type="text/scss" href="/upload_video_snippet/static/lib/uppy/uppy.min.css"/>
         </xpath>
         <xpath expr="." position="inside">
-            <script type="text/javascript" src="/hlcloud_website/static/lib/uppy/uppy.min.js"/>
-            <script type="text/javascript" src="/hlcloud_website/static/lib/uppy/zh_CN.min.js"/>
-            <script type="text/javascript" src="/hlcloud_website/static/src/js/media.js"/>
-            <script type="text/javascript" src="/hlcloud_website/static/snippets/s_video/options.js"/>
+            <script type="text/javascript" src="/upload_video_snippet/static/lib/uppy/uppy.min.js"/>
+            <script type="text/javascript" src="/upload_video_snippet/static/lib/uppy/zh_CN.min.js"/>
+            <script type="text/javascript" src="/upload_video_snippet/static/src/js/media.js"/>
+            <script type="text/javascript" src="/upload_video_snippet/static/snippets/s_video/options.js"/>
         </xpath>
     </template>
 
     <template id="assets_frontend" inherit_id="website.assets_frontend">
         <xpath expr="//link[last()]" position="after">
-            <link rel="stylesheet" href="/hlcloud_website/static/src/css/snippets.css"/>
+            <link rel="stylesheet" href="/upload_video_snippet/static/src/css/snippets.css"/>
         </xpath>
     </template>
 </odoo>
