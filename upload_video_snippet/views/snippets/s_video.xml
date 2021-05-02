@@ -4,8 +4,8 @@
     <template id="s_video" name="视频">
         <section class="s_video">
             <div class="container">
-                <video style="width:100%;" autoplay="autoplay" controls="controls" data-oe-expression="/hlcloud_website/static/src/video/default.mp4">
-                    <source t-attf-src="/hlcloud_website/static/src/video/default.mp4" type="video/mp4"/>
+                <video style="width:100%;" autoplay="autoplay" controls="controls" data-oe-expression="/upload_video_snippet/static/src/video/default.mp4">
+                    <source t-attf-src="/upload_video_snippet/static/src/video/default.mp4" type="video/mp4"/>
                     Your browser does not support the video tag.
                 </video>
             </div>
