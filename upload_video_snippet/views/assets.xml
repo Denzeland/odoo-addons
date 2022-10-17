@@ -2,7 +2,7 @@
 <odoo>
     <template id="assets_wysiwyg" inherit_id="website.assets_wysiwyg" name="upload video snippet options">
         <xpath expr="//link[last()]" position="after">
-            <link rel="stylesheet" type="text/scss" href="/hlcloud_website/static/lib/uppy/uppy.min.css"/>
+            <link rel="stylesheet" type="text/scss" href="/upload_video_snippet/static/lib/uppy/uppy.min.css"/>
         </xpath>
         <xpath expr="." position="inside">
             <script type="text/javascript" src="/upload_video_snippet/static/lib/uppy/uppy.min.js"/>
